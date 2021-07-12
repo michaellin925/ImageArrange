@@ -66,7 +66,7 @@ def main():
 
 	print("Total JFIF files converted:", jfif_file_counter)
 	print("Total PNG files converted:", png_file_counter)
-	print("Total JPG files found:", jpg_file_counter)
+	print("Total JPG files found:", jpg_file_counter, "\n")
 
 	serial_number = 1
 	rename_counter = 0
@@ -89,10 +89,15 @@ def main():
 
 	print("Total files moved:", move_counter)
 
+	remove_counter = 0
+
 	if move_counter == rename_counter:
 		for file in os.listdir(dir_path):
 			if not file.endswith(".py"):
 				os.remove(file)
+				remove_counter += 1
+
+	print("Total files removed:", remove_counter)
 
 
 if __name__ == "__main__":
