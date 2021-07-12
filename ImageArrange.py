@@ -91,8 +91,8 @@ def main():
 
 	if move_counter == rename_counter:
 		for file in os.listdir(dir_path):
-			if not file.endswith(".py")
-			os.remove(file)
+			if not file.endswith(".py"):
+				os.remove(file)
 
 
 if __name__ == "__main__":
