@@ -18,6 +18,7 @@ def convert_jfif_to_jpg(jfif_file):
 
 def convert_png_to_jpg(png_file):
 	img = Image.open(png_file)
+	img = img.convert('RGB')
 	img.save(png_file[:-4] + ".jpg")
 
 def rename_image(jpg_file, time_string, serial_number):
