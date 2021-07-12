@@ -39,7 +39,7 @@ def rename_image(jpg_file, time_string, serial_number):
 def main():
 
 	dir_path = os.path.dirname(os.path.abspath(__file__))
-	date_time = str(datatime.fromtimestamp(int(time.time())))
+	date_time = str(datetime.fromtimestamp(int(time.time())))
 	date_time_num = ''
 
 	for char in date_time:
