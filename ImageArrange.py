@@ -24,13 +24,13 @@ def rename_image(jpg_file, time_string, serial_number):
 	img = Image.open(jpg_file)
 
 	if serial_number < 10:
-		new_file_name = "img" + time_string + "000" + serial_number + ".jpg"
+		new_file_name = "img" + time_string + "000" + str(serial_number) + ".jpg"
 	elif serial_number < 100:
-		new_file_name = "img" + time_string + "00" + serial_number + ".jpg"
+		new_file_name = "img" + time_string + "00" + str(serial_number) + ".jpg"
 	elif serial_number < 1000:
-		new_file_name = "img" + time_string + "0" + serial_number + ".jpg"
+		new_file_name = "img" + time_string + "0" + str(serial_number) + ".jpg"
 	else:
-		new_file_name = "img" + time_string + serial_number + ".jpg"
+		new_file_name = "img" + time_string + str(serial_number) + ".jpg"
 
 	img.save(new_file_name)
 	print("File", jpg_file, "renamed into", new_file_name)
