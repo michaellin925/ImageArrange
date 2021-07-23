@@ -95,8 +95,11 @@ def main():
 	if move_counter == rename_counter:
 		for file in os.listdir(dir_path):
 			if not file.endswith(".py"):
-				os.remove(file)
-				remove_counter += 1
+				try:
+					os.remove(file)
+					remove_counter += 1
+				except:
+					print("Unable to remove file", file)
 
 	print("Total files removed:", remove_counter)
 
